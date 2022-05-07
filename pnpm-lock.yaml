@@ -6,16 +6,19 @@ specifiers:
   '@typescript-eslint/parser': ^5.22.0
   '@vitejs/plugin-vue': ^2.3.1
   autoprefixer: ^10.4.7
+  echarts: ^5.3.2
   eslint: ^7.32.0
   eslint-config-airbnb-base: ^15.0.0
   eslint-plugin-import: ^2.26.0
   eslint-plugin-vue: ^8.7.1
   postcss: ^8.4.13
   prettier: ^2.6.2
+  sass: ^1.51.0
   tailwindcss: ^3.0.24
   typescript: ^4.5.4
   vite: ^2.9.7
   vue: ^3.2.25
+  vue-echarts: ^6.0.2
   vue-router: ^4.0.15
   vue-tsc: ^0.34.7
   zhoukai_utils: ^1.1.0
@@ -30,15 +33,18 @@ devDependencies:
   '@typescript-eslint/parser': 5.22.0_e4zyhrvfnqudwdx5bevnvkluy4
   '@vitejs/plugin-vue': 2.3.2_vite@2.9.8+vue@3.2.33
   autoprefixer: 10.4.7_postcss@8.4.13
+  echarts: 5.3.2
   eslint: 7.32.0
   eslint-config-airbnb-base: 15.0.0_hpmu7kn6tcn2vnxpfzvv33bxmy
   eslint-plugin-import: 2.26.0_eslint@7.32.0
   eslint-plugin-vue: 8.7.1_eslint@7.32.0
   postcss: 8.4.13
   prettier: 2.6.2
+  sass: 1.51.0
   tailwindcss: 3.0.24
   typescript: 4.6.4
-  vite: 2.9.8
+  vite: 2.9.8_sass@1.51.0
+  vue-echarts: 6.0.2_echarts@5.3.2+vue@3.2.33
   vue-router: 4.0.15_vue@3.2.33
   vue-tsc: 0.34.11_typescript@4.6.4
 
@@ -267,7 +273,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.8
+      vite: 2.9.8_sass@1.51.0
       vue: 3.2.33
     dev: true
 
@@ -750,6 +756,13 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+    dev: true
+
+  /echarts/5.3.2:
+    resolution: {integrity: sha512-LWCt7ohOKdJqyiBJ0OGBmE9szLdfA9sGcsMEi+GGoc6+Xo75C+BkcT/6NNGRHAWtnQl2fNow05AQjznpap28TQ==}
+    dependencies:
+      tslib: 2.3.0
+      zrender: 5.3.1
     dev: true
 
   /electron-to-chromium/1.4.134:
@@ -1448,6 +1461,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immutable/4.0.0:
+    resolution: {integrity: sha512-zIE9hX70qew5qTUjSS7wi1iwj/l7+m54KWU247nhM3v806UdGj1yDndXj+IOYxxtW9zyLI+xqFNZjTuDaLUqFw==}
+    dev: true
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -1954,6 +1971,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /resize-detector/0.3.0:
+    resolution: {integrity: sha512-R/tCuvuOHQ8o2boRP6vgx8hXCCy87H1eY9V5imBYeVNyNVpuL9ciReSccLj2gDcax9+2weXy3bc8Vv+NRXeEvQ==}
+    dev: true
+
   /resolve-from/4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
@@ -1992,6 +2013,16 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+    dev: true
+
+  /sass/1.51.0:
+    resolution: {integrity: sha512-haGdpTgywJTvHC2b91GSq+clTKGbtkkZmVAb82jZQN/wTy6qs8DdFm2lhEQbEwrY0QDRgSQ3xDurqM977C3noA==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.0.0
+      source-map-js: 1.0.2
     dev: true
 
   /semver/6.3.0:
@@ -2182,6 +2213,10 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
+  /tslib/2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
+    dev: true
+
   /tsutils/3.21.0_typescript@4.6.4:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
@@ -2233,7 +2268,7 @@ packages:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
     dev: true
 
-  /vite/2.9.8:
+  /vite/2.9.8_sass@1.51.0:
     resolution: {integrity: sha512-zsBGwn5UT3YS0NLSJ7hnR54+vUKfgzMUh/Z9CxF1YKEBVIe213+63jrFLmZphgGI5zXwQCSmqIdbPuE8NJywPw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -2253,8 +2288,41 @@ packages:
       postcss: 8.4.13
       resolve: 1.22.0
       rollup: 2.72.0
+      sass: 1.51.0
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /vue-demi/0.12.5_vue@3.2.33:
+    resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.33
+    dev: true
+
+  /vue-echarts/6.0.2_echarts@5.3.2+vue@3.2.33:
+    resolution: {integrity: sha512-9xDokauJtAc389MNKbwi1I0VDmp4Y6ndAJTQ8T9K7H0ffosTe1OJSJbUtkT7/fVLDFzlCcmg2TfAKaMzbpg5yQ==}
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.5
+      echarts: ^5.1.2
+      vue: ^2.6.12 || ^3.1.1
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      echarts: 5.3.2
+      resize-detector: 0.3.0
+      vue: 3.2.33
+      vue-demi: 0.12.5_vue@3.2.33
     dev: true
 
   /vue-eslint-parser/8.3.0_eslint@7.32.0:
@@ -2351,3 +2419,9 @@ packages:
       dayjs: 1.11.1
       lodash-es: 4.17.21
     dev: false
+
+  /zrender/5.3.1:
+    resolution: {integrity: sha512-7olqIjy0gWfznKr6vgfnGBk7y4UtdMvdwFmK92vVQsQeDPyzkHW1OlrLEKg6GHz1W5ePf0FeN1q2vkl/HFqhXw==}
+    dependencies:
+      tslib: 2.3.0
+    dev: true

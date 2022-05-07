@@ -69,6 +69,6 @@ export default {
   left: 50%;
   top: 50%;
   transition: 0.3s;
-  background: red;
+  border: 1px solid #ccc;
 }
 </style>
